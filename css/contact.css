@@ -15,7 +15,7 @@ form {
   float: left;
   margin-right: 20px;
   width:135px;
-  border-left: 4px solid  #e0505d;
+  border-left: 4px solid  #c0414b;
   padding-left: 10px;
 }
 
@@ -45,13 +45,14 @@ textarea {
 }
 
 input[type="submit"] {
-  background: #e0505c;
+  background: #c0414b;
   border: none;
   color: white;
   font-size:17px;
   font-weight:bold;
   padding: 10px 20px;
   margin: 0 5px;
+  border-radius: 5px;
 }
 
 input[type="reset"] {
@@ -62,4 +63,5 @@ input[type="reset"] {
   font-weight:bold;
   padding: 10px 20px;
   margin: 0 5px;
+  border-radius: 5px;
 }

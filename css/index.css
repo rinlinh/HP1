@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+/*header 鞄*/
+.bagicon {
+  display: block;
+  width: 160px;
+  height: 100px;
+  position: fixed;
+  top: 10px;
+  left: 1350px;
+  z-index: 100;
+}
+
+.bagicon:hover {
+  transform: rotate( -5deg );
+  transition: .5s;
+}
+
+.bag p {
+  position: fixed;
+  top: 40px;
+  left: 1370px;
+  z-index: 150;
+  text-align: center;
+  color: #efefef;
+  font-weight: bold;
+}
+
 body {
   background-color: #E9E9E9;
 }
@@ -141,13 +167,14 @@ main {
   width: 500px;
   height: 150px;
   text-align: center;
-  margin: 0 auto 150px;
+  margin: 0 auto 100px;
 }
 
 .title h2 {
   font-size: 30px;
   text-align: center;
   padding: 20px;
+
 }
 
 
@@ -157,9 +184,13 @@ main {
 }
 
 .section h3 {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
   font-size: 24px;
   text-align: center;
   margin-bottom: 50px;
+  background: linear-gradient(transparent 60%, #e0909c);
 }
 
 
@@ -175,6 +206,10 @@ main {
   flex-direction: column;
   font-size: 20px;
   margin-top: 50px;
+}
+
+.concept_container .text span {
+  font-size: 30px;
 }
 
 .concept1 {
@@ -226,60 +261,61 @@ main {
 /*---recruit---*/
 .recruit>p {
   text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .recruit_container {
   display: flex;
-  width: 80%;
-  justify-content: center;
+  width: 1100px;
   margin: 0 auto;
 }
 
-.background_fresh{
-  background: url(../img/1110601_s.jpg) no-repeat center center / cover;
-  width: 40%;
+.bgbg_fresh {
+  width: 550px;
   height: 400px;
+  background: #000;
+}
+.bgbg_career {
+  width: 550px;
+  height: 400px;
+  background: #000;
+}
+
+
+
+.background_fresh img {
   position: relative;
   z-index: 0;
-}
-
-.background_fresh::before{
-content: '';
-position: absolute;
-width: 100%;
-height: 100%;
-background: inherit;
-filter: brightness(75%);
-z-index: -10;
-}
-
-
-.background_career{
-  background: url(../img/4193124_s.jpg) no-repeat center center / cover;
-  width: 40%;
+  width: 550px;
   height: 400px;
+}
+
+.background_career img {
   position: relative;
   z-index: 0;
+  width: 550px;
+  height: 400px;
 }
 
-.background_career::before{
-content: '';
-position: absolute;
-width: 100%;
-height: 100%;
-background: inherit;
-filter: brightness(75%);
-z-index: -10;
-}
-
-.background_fresh, .background_career p {
+.fresh p, .career p {
   color: #fff;
   font-size: 30px;
+  position: relative;
+  top: -50px;
+  left: 230px;
+  z-index: 30;
 }
 
+.background_fresh img:hover, .background_career img:hover {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
 
-
-
+.fresh p:hover + .bgbg_fresh .fresh .background_fresh img {
+  opacity: 0.6;
+  transition-duration: 0.3s;
+} /*ならん。文字上hoverだけ背景暗くならない*/
 
 
 /*---news---*/
@@ -309,5 +345,16 @@ z-index: -10;
 	color: #fff;
 	font-size: 12px;
 	padding: 3px;
+  margin-left: 5px;
 	margin-right: 50px;
 }
+
+.news_container a {
+  display: block;
+  text-align: end;
+}
+
+.news_container a:hover {
+  color: #c0414b;
+}
+
